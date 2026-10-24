@@ -40,7 +40,8 @@ services:
         VITE_API_URL: /api/v1
     restart: unless-stopped
     ports:
-      - "${WEB_PORT:-5173}:80"
+      # - "${WEB_PORT:-5173}:80"
+      - "127.0.0.1:5173:80"
     depends_on:
       - backend
 
