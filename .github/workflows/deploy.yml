@@ -64,7 +64,7 @@ jobs:
           script: |
             set -eu
 
-            cd /opt/bugtracker
+            cd /var/www/html/bugs
 
             echo "Checking required commands..."
             command -v git
