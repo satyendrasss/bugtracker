@@ -61,7 +61,6 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: ${{ secrets.SERVER_PORT || '22' }}
           command_timeout: 30m
-          script_stop: true
           script: |
             set -eu
 
