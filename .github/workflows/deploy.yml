@@ -69,17 +69,17 @@ jobs:
             echo "Checking required commands..."
             command -v git
             command -v docker
-            docker compose version
+            docker-compose version
 
             echo "Updating application code..."
             git fetch origin main
             git reset --hard origin/main
 
             echo "Building and starting containers..."
-            docker compose up -d --build --remove-orphans
+            docker-compose up -d --build --remove-orphans
 
             echo "Checking container status..."
-            docker compose ps
+            docker-compose ps
 
             echo "Checking application response..."
             curl --retry 10 \
